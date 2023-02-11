@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  </head>
+  <body>
+    <form action="/submit" method="POST" name="mashup-form">
+      <label for="artist">Enter artist: </label>
+      <input type="text" name="artist"><br>
+      <label for="duration">Enter duration of each clip (in seconds): </label>
+      <input type="number" name="duration" min="5" max="50"><br>
+      <label>Enter number of videos to be scraped: </label>
+      <input type="number" name="videos" min="10" max="30"><br>
+      <label>Enter file name: </label>
+      <input type="text" name="filename"><br>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
