@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 import sys
 sys.path.insert(1, '/utils')
 from utils import mash  
@@ -22,4 +22,8 @@ def compute():
         audios = mash_up.download(links)
         print("done with audios")
         mash_up.mash(audios, duration, output_file)
-        return "success"
+        
+    return send_file(output_file)
+
+if __name__ == "__main__":
+    app.run(debug=False, host='0.0.0.0')
